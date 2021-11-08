@@ -1,0 +1,23 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\black\Desktop\The car\car.gpr
+20211103140930 7ce347c713b03459fe9dc3b1b74627b2
+C:\Users\black\Documents\GitHub\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
+20210927093354 d64c12721d7fc6726af2bfe49cf9fc69
+[BOUND OBJECT FILES]
+C:\Users\black\Desktop\The car\obj\brain.o
+C:\Users\black\Desktop\The car\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\black\Desktop\The car\obj\
+-LC:\Users\black\Desktop\The car\obj\
+-LC:\Users\black\Documents\GitHub\Ada_Drivers_Library\boards\MicroBit_v2\obj\full_lib_Debug\
+-LC:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\
+-static
+-static-libgcc
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnarl.a
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnat.a
