@@ -1,0 +1,1 @@
+brain.adb:12:04: warning: variable "time_now" is read but never assigned [-gnatwv]

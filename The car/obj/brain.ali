@@ -21,7 +21,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV MAX_TASKS=4
 
-U brain%b		brain.adb		24bc19df OO PK IL
+U brain%b		brain.adb		56b0f6c8 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -56,8 +56,8 @@ D a-tags.ads		20211103134102 9eaa38c6 ada.tags%s
 D a-taside.ads		20211103134102 00e3a3f6 ada.task_identification%s
 D a-textio.ads		20211103134100 ffc84532 ada.text_io%s
 D a-unccon.ads		20211103134100 0e9b276f ada.unchecked_conversion%s
-D brain.ads		20211108115438 2881bbba brain%s
-D brain.adb		20211108115438 5cfc54a3 brain%b
+D brain.ads		20211115102342 2881bbba brain%s
+D brain.adb		20211115111026 e1199f93 brain%b
 D hal.ads		20210927093354 2b42c80e hal%s
 D hal-gpio.ads		20210927093354 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20210927093354 0ed73138 hal.i2c%s
@@ -117,7 +117,7 @@ D s-traent.ads		20211103134102 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20211103134100 2b077493 system.unsigned_types%s
 D unchconv.ads		20211103134100 ca2f9e18 unchecked_conversion%s
 G a e
-G c b b b [b brain 5 1 none]
+G c b b b [b brain 6 1 none]
 G c Z s b [readsensorsTK brain 2 9 none]
 G c Z s s [readsensorsTKVIP brain 2 4 none]
 G c Z s b [turnrightTK brain 3 9 none]
@@ -126,54 +126,83 @@ G c Z s b [turnleftTK brain 4 9 none]
 G c Z s s [turnleftTKVIP brain 4 4 none]
 G c Z s b [driveTK brain 5 9 none]
 G c Z s s [driveTKVIP brain 5 4 none]
-G c Z b b [rightturn brain 12 13 none]
-G c Z b b [leftturn brain 40 13 none]
-G c Z b b [correctdirection brain 68 13 none]
-G r c none [b brain 5 1 none] [set microbit__iosfortasking 25 13 none]
-G r c none [b brain 5 1 none] [set microbit__iosfortasking 22 14 none]
-G r c none [b brain 5 1 none] [analog microbit__iosfortasking 37 13 none]
-G r c none [b brain 5 1 none] [write microbit__iosfortasking 34 14 none]
+G c Z b b [rightturn brain 14 13 none]
+G c Z b b [leftturn brain 47 13 none]
+G c Z b b [correctdirection brain 80 13 none]
+G c Z b b [readright brain 131 13 none]
+G c Z b b [readcenter brain 136 13 none]
+G c Z b b [readleft brain 141 13 none]
+G r c none [b brain 6 1 none] [set microbit__iosfortasking 25 13 none]
+G r c none [b brain 6 1 none] [set microbit__iosfortasking 22 14 none]
+G r c none [b brain 6 1 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [b brain 6 1 none] [analog microbit__iosfortasking 37 13 none]
+G r c none [b brain 6 1 none] [write microbit__iosfortasking 34 14 none]
 G r c none [readsensorsTK brain 2 9 none] [set microbit__iosfortasking 25 13 none]
 G r c none [turnrightTK brain 3 9 none] [set microbit__iosfortasking 22 14 none]
+G r c none [turnrightTK brain 3 9 none] [set microbit__iosfortasking 25 13 none]
 G r c none [turnleftTK brain 4 9 none] [set microbit__iosfortasking 22 14 none]
+G r c none [turnleftTK brain 4 9 none] [set microbit__iosfortasking 25 13 none]
+G r c none [driveTK brain 5 9 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
 G r c none [driveTK brain 5 9 none] [analog microbit__iosfortasking 37 13 none]
 G r c none [driveTK brain 5 9 none] [write microbit__iosfortasking 34 14 none]
-G r c none [rightturn brain 12 13 none] [set microbit__iosfortasking 22 14 none]
-G r c none [leftturn brain 40 13 none] [set microbit__iosfortasking 22 14 none]
-G r c none [correctdirection brain 68 13 none] [set microbit__iosfortasking 22 14 none]
+G r c none [rightturn brain 14 13 none] [set microbit__iosfortasking 22 14 none]
+G r c none [rightturn brain 14 13 none] [set microbit__iosfortasking 25 13 none]
+G r c none [leftturn brain 47 13 none] [set microbit__iosfortasking 22 14 none]
+G r c none [leftturn brain 47 13 none] [set microbit__iosfortasking 25 13 none]
+G r c none [correctdirection brain 80 13 none] [set microbit__iosfortasking 22 14 none]
+G r c none [readright brain 131 13 none] [set microbit__iosfortasking 25 13 none]
+G r c none [readcenter brain 136 13 none] [set microbit__iosfortasking 25 13 none]
+G r c none [readleft brain 141 13 none] [set microbit__iosfortasking 25 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 17|2r6 2r23 3r6 3r25
+16K9*Ada 20e8 17|2r6 2r25 3r6 3r23 4r6 4r25 12r14 152r33 163r33 172r30 174r30
+. 182r30 184r30
 X 6 a-reatim.ads
-40K13*Real_Time 181e18 17|3w10 3r29
-50M9*Time<50|46M9>
+40K13*Real_Time 181e18 17|2w10 2r29 4w10 4r29 12r18 152r37 163r37 172r34
+. 174r34 182r34 184r34
+50M9*Time<50|46M9> 17|12r28
 60I9*Time_Span<50|81I9>
-67V13*Clock{50M9}<50|134p13> 17|19s22 24s22 29s22 34s22 47s22 52s22 57s22
-. 62s22 75s22 80s22 85s22 90s22 98s22 103s22 108s22 113s22
-71V14*"+"{50M9} 17|19s28 24s28 29s28 34s28 47s28 52s28 57s28 62s28 75s28
-. 80s28 85s28 90s28 98s28 103s28 108s28 113s28
-127V13*Milliseconds{60I9} 17|19s30 24s30 29s30 34s30 47s30 52s30 57s30 62s30
-. 75s30 80s30 85s30 90s30 98s30 103s30 108s30 113s30
+67V13*Clock{50M9}<50|134p13> 17|23s22 28s22 33s22 38s22 56s22 61s22 66s22
+. 71s22 87s22 92s22 97s22 102s22 110s22 115s22 120s22 125s22
+71V14*"+"{50M9} 17|23s28 28s28 33s28 38s28 56s28 61s28 66s28 71s28 87s28
+. 92s28 97s28 102s28 110s28 115s28 120s28 125s28 152s31 163s31 172s28 174s28
+. 182s28 184s28
+127V13*Milliseconds{60I9} 17|23s30 28s30 33s30 38s30 56s30 61s30 66s30 71s30
+. 87s30 92s30 97s30 102s30 110s30 115s30 120s30 125s30 152s47 163s47 172s44
+. 174s44 182s44 184s44
 X 14 a-textio.ads
-36K13*Text_IO 52e16 17|2w10 2r27
+36K13*Text_IO 52e16 17|3w10 3r27
 X 16 brain.ads
-1K9*brain 6l5 6e10 17|5b14 151l5 151t10
-2t9*ReadSensors 17|119b14 126l8 126t19
-3t9*TurnRight 17|136b14 142l8 142t17
-4t9*TurnLeft 17|144b14 150l8 150t16
-5t9*Drive 17|128b14 134l8 134t13
+1K9*brain 6l5 6e10 17|6b14 186l5 186t10
+2t9*ReadSensors 17|146b14 154l8 154t19
+3t9*TurnRight 17|167b14 175l8 175t17
+4t9*TurnLeft 17|177b14 185l8 185t16
+5t9*Drive 17|156b14 165l8 165t13
 X 17 brain.adb
-6i4 x{integer} 139m10 139m24 139r24 141m7 141m29 141r29 147m10 147m25 147r25
-. 149m7 149m29 149r29
-7b4 L{boolean} 122m10 138r13 146r13
-8b4 C{boolean} 123m10 138r27 146r26
-9b4 R{boolean} 124m10 138r41 146r40
-10i4 readPot{25|28I9} 131m10 132r43
-12V13 RightTurn{integer} 12b13 12=23 38l8 38t17 147s15
-12i23 var{integer} 14r13 35m10 35r17 37r14
-40V13 LeftTurn{integer} 40b13 40=22 66l8 66t16 139s15
-40i22 var{integer} 42r13 63m10 63r17 65r14
-68V13 CorrectDirection{integer} 68b13 68=30 117l8 117t24 141s12 149s12
-68i30 var{integer} 70r13 91m10 91r17 93r13 114m10 114r17 116r14
+7i4 x{integer} 170m10 170m24 170r24 173m7 173m29 173r29 180m10 180m25 180r25
+. 183m7 183m29 183r29
+8b4 L{boolean} 151m10 151m24 151r24 169r11 170m27 170r27 179r11 180m28 180r28
+9b4 C{boolean} 150m10 150m26 150r26 169r25 170m30 170r30 179r24 180m31 180r31
+10b4 R{boolean} 149m10 149m25 149r25 169r39 170m33 170r33 179r38 180m34 180r34
+11i4 readPot{25|28I9} 161m10 162r43
+12m4 time_now{6|50M9} 152r22 163r22 172r19 174r19 182r19 184r19
+14V13 RightTurn{integer} 14b13 14=23 14=45 15=23 15=43 45l8 45t17 180s15
+14i23 var{integer} 17r14 42m10 42r17 44r14
+14b45 L{boolean} 17r28 41m10
+15b23 C{boolean} 18r18 40m10
+15b43 R{boolean} 18r32 39m10
+47V13 LeftTurn{integer} 47b13 47=22 47=44 48=23 48=43 78l8 78t16 170s15
+47i22 var{integer} 50r14 75m10 75r17 77r14
+47b44 L{boolean} 50r29 74m10
+48b23 C{boolean} 51r18 73m10
+48b43 R{boolean} 51r32 72m10
+80V13 CorrectDirection{integer} 80b13 80=30 129l8 129t24 173s12 183s12
+80i30 var{integer} 82r13 103m10 103r17 105r13 126m10 126r17 128r14
+131V13 ReadRight{boolean} 131b13 131=23 134l8 134t17 149s15
+131b23 R{boolean}
+136V13 ReadCenter{boolean} 136b13 136=24 139l8 139t18 150s15
+136b24 C{boolean}
+141V13 ReadLeft{boolean} 141b13 141=22 144l8 144t16 151s15
+141b22 L{boolean}
 X 19 hal-gpio.ads
 47h9*GPIO_Point
 X 20 hal-i2c.ads
@@ -183,31 +212,32 @@ X 21 hal-spi.ads
 X 22 hal-uart.ads
 48h9*UART_Port
 X 24 microbit.ads
-58K9*MicroBit 17|1r6 10r14 15r10 16r10 17r10 18r10 20r10 21r10 22r10 23r10
-. 25r10 26r10 27r10 28r10 30r10 31r10 32r10 33r10 43r10 44r10 45r10 46r10
-. 48r10 49r10 50r10 51r10 53r10 54r10 55r10 56r10 58r10 59r10 60r10 61r10
-. 71r10 72r10 73r10 74r10 76r10 77r10 78r10 79r10 81r10 82r10 83r10 84r10
-. 86r10 87r10 88r10 89r10 94r10 95r10 96r10 97r10 99r10 100r10 101r10 102r10
-. 104r10 105r10 106r10 107r10 109r10 110r10 111r10 112r10 122r15 123r15 124r15
-. 131r21 132r10 24|112e13
+58K9*MicroBit 17|1r6 11r14 19r10 20r10 21r10 22r10 24r10 25r10 26r10 27r10
+. 29r10 30r10 31r10 32r10 34r10 35r10 36r10 37r10 39r15 40r15 41r15 52r10
+. 53r10 54r10 55r10 57r10 58r10 59r10 60r10 62r10 63r10 64r10 65r10 67r10
+. 68r10 69r10 70r10 72r15 73r15 74r15 83r10 84r10 85r10 86r10 88r10 89r10
+. 90r10 91r10 93r10 94r10 95r10 96r10 98r10 99r10 100r10 101r10 106r10 107r10
+. 108r10 109r10 111r10 112r10 113r10 114r10 116r10 117r10 118r10 119r10 121r10
+. 122r10 123r10 124r10 133r14 138r14 143r14 158r7 161r21 162r10 24|112e13
 X 25 microbit-iosfortasking.ads
-5K18*IOsForTasking 17|1w15 10r23 15r19 16r19 17r19 18r19 20r19 21r19 22r19
-. 23r19 25r19 26r19 27r19 28r19 30r19 31r19 32r19 33r19 43r19 44r19 45r19
-. 46r19 48r19 49r19 50r19 51r19 53r19 54r19 55r19 56r19 58r19 59r19 60r19
-. 61r19 71r19 72r19 73r19 74r19 76r19 77r19 78r19 79r19 81r19 82r19 83r19
-. 84r19 86r19 87r19 88r19 89r19 94r19 95r19 96r19 97r19 99r19 100r19 101r19
-. 102r19 104r19 105r19 106r19 107r19 109r19 110r19 111r19 112r19 122r24 123r24
-. 124r24 131r30 132r19 25|91e27
-22U14*Set 17|15s33 16s33 17s33 18s33 20s33 21s33 22s33 23s33 25s33 26s33
-. 27s33 28s33 30s33 31s33 32s33 33s33 43s33 44s33 45s33 46s33 48s33 49s33
-. 50s33 51s33 53s33 54s33 55s33 56s33 58s33 59s33 60s33 61s33 71s33 72s33
-. 73s33 74s33 76s33 77s33 78s33 79s33 81s33 82s33 83s33 84s33 86s33 87s33
-. 88s33 89s33 94s33 95s33 96s33 97s33 99s33 100s33 101s33 102s33 104s33 105s33
-. 106s33 107s33 109s33 110s33 111s33 112s33
-25V13*Set{boolean} 17|122s38 123s38 124s38
-28I9*Analog_Value<short_integer> 17|10r37
-34U14*Write 17|132s33
-37V13*Analog{28I9} 17|131s44
+5K18*IOsForTasking 17|1w15 11r23 19r19 20r19 21r19 22r19 24r19 25r19 26r19
+. 27r19 29r19 30r19 31r19 32r19 34r19 35r19 36r19 37r19 39r24 40r24 41r24
+. 52r19 53r19 54r19 55r19 57r19 58r19 59r19 60r19 62r19 63r19 64r19 65r19
+. 67r19 68r19 69r19 70r19 72r24 73r24 74r24 83r19 84r19 85r19 86r19 88r19
+. 89r19 90r19 91r19 93r19 94r19 95r19 96r19 98r19 99r19 100r19 101r19 106r19
+. 107r19 108r19 109r19 111r19 112r19 113r19 114r19 116r19 117r19 118r19 119r19
+. 121r19 122r19 123r19 124r19 133r23 138r23 143r23 158r16 161r30 162r19 25|91e27
+22U14*Set 17|19s33 20s33 21s33 22s33 24s33 25s33 26s33 27s33 29s33 30s33
+. 31s33 32s33 34s33 35s33 36s33 37s33 52s33 53s33 54s33 55s33 57s33 58s33
+. 59s33 60s33 62s33 63s33 64s33 65s33 67s33 68s33 69s33 70s33 83s33 84s33
+. 85s33 86s33 88s33 89s33 90s33 91s33 93s33 94s33 95s33 96s33 98s33 99s33
+. 100s33 101s33 106s33 107s33 108s33 109s33 111s33 112s33 113s33 114s33 116s33
+. 117s33 118s33 119s33 121s33 122s33 123s33 124s33
+25V13*Set{boolean} 17|39s38 40s38 41s38 72s38 73s38 74s38 133s37 138s37 143s37
+28I9*Analog_Value<short_integer> 17|11r37
+30U14*Set_Analog_Period_Us 17|158s30
+34U14*Write 17|162s33
+37V13*Analog{28I9} 17|161s44
 X 50 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
